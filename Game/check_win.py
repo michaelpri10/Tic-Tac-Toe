@@ -1,5 +1,5 @@
-# Checks after each turn if there are three of the same symbol in a row
 def check_win(board, n):
+
     # All possible winning configurations
     possible_configs = [["1", "2", "3"],
                         ["1", "4", '7'],

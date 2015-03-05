@@ -1,6 +1,5 @@
 import random
 
-# This will run if you selected EASY
 def AI_turn_easy(board, possible_nums, AI_XO):
 
     # generates a random, available space on the board and makes it an 'O'
@@ -10,7 +9,7 @@ def AI_turn_easy(board, possible_nums, AI_XO):
 
     return possible_nums
 
-# This will run if you selected HARD
+
 def AI_turn_hard(board, possible_nums, AI_XO):
 
     # All of the possible winning configurations
@@ -84,11 +83,11 @@ def AI_turn_impossible(board, possible_nums, AI_XO):
         else:
             pass
 
-    for space in ['5', '1', '7', '3', '9']:
+    # Take either the middle or a corner piece, which makes it impossible to win (I think)
+    for space in random.shuffle(['5', '1', '7', '3', '9']):
         if space in possible_nums:
             possible_nums.remove(space)
             board.spaces[space] = AI_XO
             return possible_nums
 
-    # If there aren't any matches of two in any of the rows, choose a random, available space
     return AI_turn_easy(board, possible_nums, AI_XO)
