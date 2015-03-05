@@ -1,7 +1,7 @@
 from board_class import Board
 from difficulty import difficulty
 from chooseXO import chooseXO
-from AI_turn import AI_turn_easy, AI_turn_hard
+from AI_turn import AI_turn_easy, AI_turn_hard, AI_turn_impossible
 from user_turn import p1_turn
 from check_win import check_win
 from play_again import play_again
@@ -19,7 +19,7 @@ def main():
         board = Board()
         turns_taken = 0
         possible_nums = [str(i) for i in range (1,10)]
-        last_move = chooseXO()
+        last_move, AI_XO, p1_XO = chooseXO()
 
         while turns_taken < 9:
             print("\n" * 200)
@@ -29,13 +29,15 @@ def main():
                 print("AI's turn")
                 time.sleep(1.5)
                 if diff == "E":
-                    possible_nums = AI_turn_easy(board, possible_nums)
+                    possible_nums = AI_turn_easy(board, possible_nums, AI_XO)
                 elif diff == "H":
-                    possible_nums = AI_turn_hard(board, possible_nums)
-                last_move = "AI"
+                    possible_nums = AI_turn_hard(board, possible_nums, AI_XO)
+                elif diff == "I":
+                    possible_nums = AI_turn_impossible(board, possible_nums, AI_XO)
+                last_move = "AI"    
                 
             elif last_move == "AI":
-                possible_nums = p1_turn(board, possible_nums)
+                possible_nums = p1_turn(board, possible_nums, p1_XO)
                 last_move = "p1"
 
             win = check_win(board, turns_taken)

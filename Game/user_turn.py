@@ -5,7 +5,7 @@ except NameError:
     pass
 
 # Runs when it is the user's turn
-def p1_turn(board, possible_nums):
+def p1_turn(board, possible_nums, p1_XO):
     print("Player 1's turn")
 
     # If the input by the user is valid (1-9) and not taken yet, mark the spot with and 'X'
@@ -15,12 +15,6 @@ def p1_turn(board, possible_nums):
         choice = input("Choose a space on the board (1-9) ")
     if int(choice) in range(1,10):
         possible_nums.remove(choice)
-        board.spaces[choice] = "X"
+        board.spaces[choice] = p1_XO
 
     return possible_nums
-    
-
-
-
-        
-        

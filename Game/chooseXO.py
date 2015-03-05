@@ -14,8 +14,8 @@ def chooseXO():
     if choice.lower() == 'x':
         print("AI will go first")
         time.sleep(1.5)
-        return "p1"
+        return("p1", "O", "X")
     elif choice.lower() == 'o':
         print("You will go first")
         time.sleep(1.5)
-        return "AI"
+        return("AI", "X", "O")
