@@ -14,7 +14,7 @@ def main():
         print("\n" * 500)
         
         diff = difficulty()
-        time.sleep(2)
+        time.sleep(1.5)
         
         board = Board()
         turns_taken = 0
@@ -51,10 +51,10 @@ def main():
         print("\n" * 200)
         board.print_board()
 
-        if win == "O":
+        if win == AI_XO:
             print("AI wins. You lose :(")
-        elif win == "X":
-            print("You win :). Congratulations!")
+        elif win == p1_XO:
+            print("You win :) Congratulations!")
         elif win == "draw":
             print("It was a draw")
 
@@ -71,6 +71,8 @@ def main():
         else:
             break
 
+    print("Goodbye")
+    time.sleep(1.5)
     quit()
 
 if __name__ == "__main__":
