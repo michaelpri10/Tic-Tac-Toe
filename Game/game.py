@@ -55,7 +55,7 @@ def main():
             print("AI wins. You lose :(")
         elif win == p1_XO:
             print("You win :) Congratulations!")
-        elif win == "draw":
+        else:
             print("It was a draw")
 
         time.sleep(2)
