@@ -6,11 +6,11 @@ except NameError:
     pass
 
 def chooseXO():
-    choice = input("Would you like to be 'X' or 'O'? ")
+    choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
     while choice.lower() not in ['x', 'o']:
         print("Invalid Input")
 
-        choice = input("Would you like to be 'X' or 'O'? ")
+        choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
     if choice.lower() == 'x':
         print("AI will go first")
         time.sleep(1.5)
