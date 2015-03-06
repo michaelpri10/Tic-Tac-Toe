@@ -18,4 +18,4 @@ Format of the board
                    
 The user inputs a number (1-9) and if the space is available, it will put either an 'X' or an 'O' on the spot corresponding to the number.
 
-Still working on Impossible Difficulty, 2 Player
+Still working on 2 Player mode
