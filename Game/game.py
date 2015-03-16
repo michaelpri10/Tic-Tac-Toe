@@ -12,10 +12,10 @@ def main():
         # print("\n" * n) - makes it appear as if it is a new screen
 
         print("\n" * 500)
-        
+
         diff = difficulty()
         time.sleep(1.5)
-        
+
         board = Board()
         turns_taken = 0
         possible_nums = [str(i) for i in range (1,10)]
@@ -33,9 +33,9 @@ def main():
                 elif diff == "H":
                     possible_nums = AI_turn_hard(board, possible_nums, AI_XO)
                 elif diff == "I":
-                    possible_nums = AI_turn_impossible(board, possible_nums, AI_XO)
-                last_move = "AI"    
-                
+                    possible_nums = AI_turn_impossible(board, possible_nums, AI_XO, p1_XO)
+                last_move = "AI"
+
             elif last_move == "AI":
                 possible_nums = p1_turn(board, possible_nums, p1_XO)
                 last_move = "p1"
@@ -45,7 +45,7 @@ def main():
                 pass
             else:
                 break
-            
+
             turns_taken += 1
 
         print("\n" * 200)
@@ -77,6 +77,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-
-        

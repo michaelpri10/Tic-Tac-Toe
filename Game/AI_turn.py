@@ -55,7 +55,7 @@ def AI_turn_hard(board, possible_nums, AI_XO):
         return AI_turn_easy(board, possible_nums, AI_XO)
 
 
-def AI_turn_impossible(board, possible_nums, AI_XO):
+def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
 
     move = avoid_losing_and_win_if_possible(board, possible_nums, AI_XO)
 
@@ -67,13 +67,33 @@ def AI_turn_impossible(board, possible_nums, AI_XO):
             board.spaces['5'] = AI_XO
             return possible_nums
         else:
-            corner_spaces = ['1', '7', '3', '9']
-            random.shuffle(corner_spaces)
-            # Take either the middle or a corner piece, which makes it impossible to win (I think)
-            for space in corner_spaces:
-                if space in possible_nums:
-                    possible_nums.remove(space)
-                    board.spaces[space] = AI_XO
-                    return possible_nums
+            side_spaces = ['8', '4', '2', '6']
+            if board.spaces['1'] is p1_XO:
+                if board.spaces['9'] is p1_XO:
+                    random.shuffle(side_spaces)
+                    for space in side_spaces:
+                        if space in possible_nums:
+                            possible_nums.remove(space)
+                            board.spaces[space] = AI_XO
+                            return possible_nums
+
+            elif board.spaces['7'] is p1_XO:
+                if board.spaces['3'] is p1_XO:
+                    random.shuffle(side_spaces)
+                    for space in side_spaces:
+                        if space in possible_nums:
+                            possible_nums.remove(space)
+                            board.spaces[space] = AI_XO
+                            return possible_nums
+
+            else:
+                corner_spaces = ['1', '7', '3', '9']
+                random.shuffle(corner_spaces)
+                # Take either the middle or a corner piece, which makes it impossible to win (I think)
+                for space in corner_spaces:
+                    if space in possible_nums:
+                        possible_nums.remove(space)
+                        board.spaces[space] = AI_XO
+                        return possible_nums
 
     return AI_turn_easy(board, possible_nums, AI_XO)
