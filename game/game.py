@@ -1,7 +1,7 @@
 from board_class import Board
 from difficulty import difficulty
-from chooseXO import chooseXO
-from AI_turn import AI_turn_easy, AI_turn_hard, AI_turn_impossible
+from choose_xo import chooseXO
+from ai_turn import AI_turn_easy, AI_turn_hard, AI_turn_impossible
 from user_turn import p1_turn
 from check_win import check_win
 from play_again import play_again
