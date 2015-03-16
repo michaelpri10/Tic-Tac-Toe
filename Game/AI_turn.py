@@ -80,8 +80,8 @@ def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
             return possible_nums
         else:
             side_spaces = ['8', '4', '2', '6']
-            if board.spaces['1'] is p1_XO:
-                if board.spaces['9'] is p1_XO:
+            if board.spaces['1'] == p1_XO:
+                if board.spaces['9'] == p1_XO:
                     random.shuffle(side_spaces)
                     for space in side_spaces:
                         if space in possible_nums:
@@ -89,8 +89,8 @@ def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
                             board.spaces[space] = AI_XO
                             return possible_nums
 
-            elif board.spaces['7'] is p1_XO:
-                if board.spaces['3'] is p1_XO:
+            elif board.spaces['7'] == p1_XO:
+                if board.spaces['3'] == p1_XO:
                     random.shuffle(side_spaces)
                     for space in side_spaces:
                         if space in possible_nums:
