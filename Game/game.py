@@ -31,7 +31,7 @@ def main():
                 if diff == "E":
                     possible_nums = AI_turn_easy(board, possible_nums, AI_XO)
                 elif diff == "H":
-                    possible_nums = AI_turn_hard(board, possible_nums, AI_XO)
+                    possible_nums = AI_turn_hard(board, possible_nums, AI_XO, p1_XO)
                 elif diff == "I":
                     possible_nums = AI_turn_impossible(board, possible_nums, AI_XO, p1_XO)
                 last_move = "AI"
