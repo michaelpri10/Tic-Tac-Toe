@@ -4,10 +4,10 @@ except NameError:
     pass
 
 def play_again():
-    p_a_choice = str(input("Play again? (y or n) "))
+    p_a_choice = str(input("Play again? (y or n) ")).lower()
     while p_a_choice not in ["y", "n"]:
         print("Invalid Input")
-        p_a_choice = str(input("Play again? (y or n) "))
+        p_a_choice = str(input("Play again? (y or n) ")).lower()
     if p_a_choice == 'n':
         print("Goodbye")
         print("\n" * 55)
