@@ -21,34 +21,35 @@ def avoid_losing_and_win_if_possible(board, possible_nums, AI_XO, p1_XO):
                         ["4", "5", "6"],
                         ["7", "8", "9"]]
 
-    # Check each configuration; if there is two of the three spaces equal each other, put an 'O' in the other space
+    # Check each configuration; if two of the three spaces equal each other, put an 'O' in the other space
     for config in possible_configs:
-        if board.spaces[config[0]] == AI_XO and board.spaces[config[0]] == board.spaces[config[1]]:
+        if board.spaces[config[0]] is AI_XO and board.spaces[config[0]] == board.spaces[config[1]]:
             if board.spaces[config[2]] in possible_nums:
                 possible_nums.remove(board.spaces[config[2]])
                 board.spaces[config[2]] = AI_XO
                 return possible_nums
-        elif board.spaces[config[0]] == AI_XO and board.spaces[config[0]] == board.spaces[config[2]]:
+        elif board.spaces[config[0]] is AI_XO and board.spaces[config[0]] == board.spaces[config[2]]:
             if board.spaces[config[1]] in possible_nums:
                 possible_nums.remove(board.spaces[config[1]])
                 board.spaces[config[1]] = AI_XO
                 return possible_nums
-        elif board.spaces[config[1]] == AI_XO and board.spaces[config[1]] == board.spaces[config[2]]:
+        elif board.spaces[config[1]] is AI_XO and board.spaces[config[1]] == board.spaces[config[2]]:
             if board.spaces[config[0]] in possible_nums:
                 possible_nums.remove(board.spaces[config[0]])
                 board.spaces[config[0]] = AI_XO
                 return possible_nums
-        elif board.spaces[config[0]] == p1_XO and board.spaces[config[0]] == board.spaces[config[1]]:
+    for config in possible_configs:
+        if board.spaces[config[0]] is not AI_XO and board.spaces[config[0]] == board.spaces[config[1]]:
             if board.spaces[config[2]] in possible_nums:
                 possible_nums.remove(board.spaces[config[2]])
                 board.spaces[config[2]] = AI_XO
                 return possible_nums
-        elif board.spaces[config[0]] == p1_XO and board.spaces[config[0]] == board.spaces[config[2]]:
+        elif board.spaces[config[0]] is not AI_XO and board.spaces[config[0]] == board.spaces[config[2]]:
             if board.spaces[config[1]] in possible_nums:
                 possible_nums.remove(board.spaces[config[1]])
                 board.spaces[config[1]] = AI_XO
                 return possible_nums
-        elif board.spaces[config[1]] == p1_XO and board.spaces[config[1]] == board.spaces[config[2]]:
+        elif board.spaces[config[0]] is not AI_XO and board.spaces[config[1]] == board.spaces[config[2]]:
             if board.spaces[config[0]] in possible_nums:
                 possible_nums.remove(board.spaces[config[0]])
                 board.spaces[config[0]] = AI_XO
