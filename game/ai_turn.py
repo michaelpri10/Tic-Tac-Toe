@@ -71,7 +71,7 @@ def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
 
     move = avoid_losing_and_win_if_possible(board, possible_nums, AI_XO, p1_XO)
 
-    if move:
+    if move != None:
         return move
     else:
         if '5' in possible_nums:
@@ -101,11 +101,11 @@ def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
             else:
                 corner_spaces = ['1', '7', '3', '9']
                 random.shuffle(corner_spaces)
-                # Take either the middle or a corner piece, which makes it impossible to win (I think)
                 for space in corner_spaces:
                     if space in possible_nums:
                         possible_nums.remove(space)
                         board.spaces[space] = AI_XO
                         return possible_nums
 
-    return AI_turn_easy(board, possible_nums, AI_XO)
+    if possible_nums != []:
+        return AI_turn_easy(board, possible_nums, AI_XO)
