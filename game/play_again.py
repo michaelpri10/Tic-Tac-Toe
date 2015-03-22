@@ -16,4 +16,5 @@ def play_again():
         clearScreen()
         return False
     elif p_a_choice == 'y':
+        clearScreen()
         return True

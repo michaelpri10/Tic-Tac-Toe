@@ -34,6 +34,7 @@ def p1vsai():
             last_move = "AI"
 
         elif last_move == "AI":
+            print("Player 1's turn")
             possible_nums = p1_turn(board, possible_nums, p1_XO)
             last_move = "p1"
 

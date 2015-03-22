@@ -8,24 +8,27 @@ from play_again import play_again
 from clearScreen import clearScreen
 from chooseMode import chooseMode
 from p1vsai import p1vsai
+from p1vsp2 import p1vsp2
 import time
 
-game_mode = chooseMode()
-eval(game_mode)
-
-times_played = 0
-while times_played < 10:
+def main():
     clearScreen()
-    if play_again():
-        game_mode = chooseMode()
-        eval(game_mode)
-        times_played += 1
-    else:
-        break
+    game_mode = chooseMode()
+    eval(game_mode)
 
-print("Goodbye")
-time.sleep(1.5)
-quit()
+    times_played = 0
+    while times_played < 10:
+        clearScreen()
+        if play_again():
+            game_mode = chooseMode()
+            eval(game_mode)
+            times_played += 1
+        else:
+            break
+
+    print("Goodbye")
+    time.sleep(1.5)
+    quit()
 
 if __name__ == "__main__":
     main()

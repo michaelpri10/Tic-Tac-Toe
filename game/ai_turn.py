@@ -1,7 +1,6 @@
 import random
 
 def AI_turn_easy(board, possible_nums, AI_XO):
-
     # generates a random, available space on the board and makes it an 'O'
     randChoice = random.choice(possible_nums)
     possible_nums.remove(randChoice)
@@ -59,7 +58,6 @@ def avoid_losing_and_win_if_possible(board, possible_nums, AI_XO, p1_XO):
     return None
 
 def AI_turn_hard(board, possible_nums, AI_XO, p1_XO):
-
     move = avoid_losing_and_win_if_possible(board, possible_nums, AI_XO, p1_XO)
 
     if move != None:
@@ -69,7 +67,6 @@ def AI_turn_hard(board, possible_nums, AI_XO, p1_XO):
 
 
 def AI_turn_impossible(board, possible_nums, AI_XO, p1_XO):
-
     move = avoid_losing_and_win_if_possible(board, possible_nums, AI_XO, p1_XO)
 
     if move != None:
