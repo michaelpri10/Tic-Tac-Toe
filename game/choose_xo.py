@@ -1,3 +1,5 @@
+from clearScreen import clearScreen
+
 import time
 
 try:
@@ -8,8 +10,8 @@ except NameError:
 def chooseXO():
     choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
     while choice.lower() not in ['x', 'o']:
+        clearScreen()
         print("Invalid Input")
-
         choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
     if choice.lower() == 'x':
         print("AI will go first")

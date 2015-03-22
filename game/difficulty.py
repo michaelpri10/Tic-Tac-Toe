@@ -1,3 +1,4 @@
+from clearScreen import clearScreen
 import time
 
 try:
@@ -5,14 +6,18 @@ try:
 except NameError:
     pass
 
-def difficulty():
+def difficultyChoice():
     print("  1.  EASY")
     print("  2.  HARD")
     print("  3.  IMPOSSIBLE")
 
+def difficulty():
+    difficultyChoice()
     d_choice = input("What difficulty would like? ")
     while d_choice.isdigit() == False or int(d_choice) not in [1,2,3]:
+        clearScreen()
         print("Invalid Input")
+        difficultyChoice()
         d_choice = input("What difficulty would like? ")
     if int(d_choice) in [1,2,3]:
         if int(d_choice) == 1:
