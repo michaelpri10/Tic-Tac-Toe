@@ -9,6 +9,7 @@ from clearScreen import clearScreen
 from chooseMode import chooseMode
 from p1vsai import p1vsai
 from p1vsp2 import p1vsp2
+from aivsai import aivsai
 import time
 
 def main():

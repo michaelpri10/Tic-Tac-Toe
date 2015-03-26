@@ -51,9 +51,12 @@ def p1vsai():
 
     if win == AI_XO:
         print("Bot wins. You lose :(")
+        time.sleep(1.5)
     elif win == p1_XO:
         print("You win :) Congratulations!")
+        time.sleep(1.5)
     else:
         print("It was a draw")
+        time.sleep(1.5)
 
     time.sleep(1.5)

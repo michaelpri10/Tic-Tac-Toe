@@ -43,9 +43,12 @@ def p1vsp2():
 
     if win == p1_XO:
         print("Player 1 wins! Congratulations :)")
+        time.sleep(1.5)
     elif win == p2_XO:
         print("Player 2 wins! Congratulations :)")
+        time.sleep(1.5)
     else:
         print("It was a draw")
+        time.sleep(1.5)
 
     time.sleep(1.5)
