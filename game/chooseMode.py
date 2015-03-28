@@ -1,4 +1,7 @@
 from clearScreen import clearScreen
+from p1vsai import p1vsai
+from p1vsp2 import p1vsp2
+from aivsai import aivsai
 
 try:
     input=raw_input
@@ -19,8 +22,8 @@ def chooseMode():
         modeChoices()
         gameMode = input("Which mode would you like to play? ")
     if gameMode == "1":
-        return "p1vsp2()"
+        return p1vsp2()
     elif gameMode == "2":
-        return "p1vsai()"
+        return p1vsai()
     elif gameMode == "3":
-        return "aivsai()"
+        return aivsai()

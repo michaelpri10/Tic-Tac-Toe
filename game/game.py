@@ -15,14 +15,12 @@ import time
 def main():
     clearScreen()
     game_mode = chooseMode()
-    eval(game_mode)
-
+    
     times_played = 0
     while times_played < 10:
         clearScreen()
         if play_again():
             game_mode = chooseMode()
-            eval(game_mode)
             times_played += 1
         else:
             break
