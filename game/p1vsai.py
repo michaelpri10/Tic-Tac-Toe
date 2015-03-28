@@ -26,7 +26,7 @@ def p1vsai():
             print("Bot's turn")
             time.sleep(1.5)
             if diff == "E":
-                possible_nums = AI_turn_easy(board, possible_nums, AI_XO)
+                possible_nums = AI_turn_easy(board, possible_nums, AI_XO, p1_XO)
             elif diff == "H":
                 possible_nums = AI_turn_hard(board, possible_nums, AI_XO, p1_XO)
             elif diff == "I":

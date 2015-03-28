@@ -18,8 +18,8 @@ def aivsai():
     AI2_XO = "X"
     last_move = "AI2"
 
-    AI1_moves = ["AI_turn_easy(board, possible_nums, AI1_XO)", "AI_turn_hard(board, possible_nums, AI1_XO, AI2_XO)", "AI_turn_impossible(board, possible_nums, AI1_XO, AI2_XO)"]
-    AI2_moves = ["AI_turn_easy(board, possible_nums, AI2_XO)", "AI_turn_hard(board, possible_nums, AI2_XO, AI1_XO)", "AI_turn_impossible(board, possible_nums, AI2_XO, AI1_XO)"]
+    AI1_moves = [AI_turn_easy, AI_turn_hard, AI_turn_impossible]
+    AI2_moves = [AI_turn_easy, AI_turn_hard, AI_turn_impossible]
 
     while turns_taken < 9:
         clearScreen()
@@ -28,12 +28,12 @@ def aivsai():
         if last_move == "AI2":
             print("Bot 1's Turn")
             time.sleep(1.5)
-            possible_nums = eval(random.choice(AI1_moves))
+            possible_nums = random.choice(AI1_moves)(board, possible_nums, AI1_XO, AI2_XO)
             last_move = "AI1"
         elif last_move == "AI1":
             print("Bot 2's turn")
             time.sleep(1.5)
-            possible_nums = eval(random.choice(AI2_moves))
+            possible_nums = random.choice(AI2_moves)(board, possible_nums, AI2_XO, AI1_XO)
             last_move = "AI2"
 
         win = check_win(board, turns_taken)
