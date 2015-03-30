@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-Tic-Tac-Toe game created with Python. Board is made of ACSII characters. The user plays an AI.
+Tic-Tac-Toe game created with Python. Board is made of ACSII characters. The user can play a bot, another player, or just watch two bots battle it out.
 
 Format of the board
 
