@@ -1,8 +1,7 @@
 # Tic-Tac-Toe
-Tic-Tac-Toe game created with Python. Board is made of ACSII characters. The user plays an AI.
+Juego de tic-tac-toe creado con Python. Junta está compuesta por caracteres ASCII. El usuario puede jugar un bot, otro jugador, o ver dos robots batallar.
 
-Format of the board
-
+Formato de la junta
 
                    |      |
                1   |   2  |   3
@@ -15,7 +14,5 @@ Format of the board
                    |      |
                7   |   8  |   9
                    |      |
-                   
-The user inputs a number (1-9) and if the space is available, it will put either an 'X' or an 'O' on the spot corresponding to the number.
 
-Still working on 2 Player mode
+El usuario entradas un número (1-9) y si el espacio disponible, se pondrá cada una 'X' o una 'O' en el lugar correspondiente al número.
