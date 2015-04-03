@@ -15,7 +15,5 @@ Format of the board
                    |      |
                7   |   8  |   9
                    |      |
-                   
-The user inputs a number (1-9) and if the space is available, it will put either an 'X' or an 'O' on the spot corresponding to the number.
 
-Still working on 2 Player mode
+The user inputs a number (1-9) and if the space is available, it will put either an 'X' or an 'O' on the spot corresponding to the number.

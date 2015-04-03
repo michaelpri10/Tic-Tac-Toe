@@ -14,7 +14,7 @@ def chooseXO():
         print("Invalid Input")
         choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
     if choice.lower() == 'x':
-        print("AI will go first")
+        print("Bot will go first")
         time.sleep(1.5)
         return("p1", "O", "X")
     elif choice.lower() == 'o':

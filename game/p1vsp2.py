@@ -27,7 +27,7 @@ def p1vsp2():
             last_move = "p1"
         elif last_move == "p1":
             print("Player 2's turn")
-            possible_nums = p2_turn(board, possible_nums, p2_XO)
+            possible_nums = p1_turn(board, possible_nums, p2_XO)
             last_move = "p2"
 
         win = check_win(board, turns_taken)
