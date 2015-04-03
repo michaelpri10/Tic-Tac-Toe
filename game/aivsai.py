@@ -11,8 +11,8 @@ def aivsai():
     board = Board()
     turns_taken = 0
     possible_nums = [str(i) for i in range (1,10)]
-    print("Bot 1 is 'O' and will go first")
-    print("Bot 2 is 'X' and will go second")
+    print("Robot 1 es 'O' y vayan en primer lugar")
+    print("Robot 2 es 'X' y vayan en segundo lugar")
     time.sleep(2)
     AI1_XO = "O"
     AI2_XO = "X"
@@ -26,12 +26,12 @@ def aivsai():
         board.print_board()
 
         if last_move == "AI2":
-            print("Bot 1's Turn")
+            print("Robot 1 turno")
             time.sleep(1.5)
             possible_nums = eval(random.choice(AI1_moves))
             last_move = "AI1"
         elif last_move == "AI1":
-            print("Bot 2's turn")
+            print("Robot 2 turno")
             time.sleep(1.5)
             possible_nums = eval(random.choice(AI2_moves))
             last_move = "AI2"
@@ -48,13 +48,13 @@ def aivsai():
     board.print_board()
 
     if win == AI1_XO:
-        print("Bot 1 wins!")
+        print("Robot 1 gana!")
         time.sleep(1.5)
     elif win == AI2_XO:
-        print("Bot 2 wins!")
+        print("Robot 2 gana!")
         time.sleep(1.5)
     else:
-        print("It was a draw")
+        print("Era un empate")
         time.sleep(1.5)
 
     time.sleep(1.5)

@@ -23,7 +23,7 @@ def p1vsai():
         board.print_board()
 
         if last_move == "p1":
-            print("Bot's turn")
+            print("Robot turno")
             time.sleep(1.5)
             if diff == "E":
                 possible_nums = AI_turn_easy(board, possible_nums, AI_XO)
@@ -34,7 +34,7 @@ def p1vsai():
             last_move = "AI"
 
         elif last_move == "AI":
-            print("Player 1's turn")
+            print("Jugador 1 turno")
             possible_nums = p1_turn(board, possible_nums, p1_XO)
             last_move = "p1"
 
@@ -50,13 +50,13 @@ def p1vsai():
     board.print_board()
 
     if win == AI_XO:
-        print("Bot wins. You lose :(")
+        print("Robot gana. Se pierde :(")
         time.sleep(1.5)
     elif win == p1_XO:
-        print("You win :) Congratulations!")
+        print("Usted gana :) Felicidades!")
         time.sleep(1.5)
     else:
-        print("It was a draw")
+        print("Era un empate")
         time.sleep(1.5)
 
     time.sleep(1.5)

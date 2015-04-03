@@ -6,15 +6,14 @@ except NameError:
     pass
 
 def play_again():
-    p_a_choice = str(input("Play again? (y or n) ")).lower()
-    while p_a_choice not in ["y", "n"]:
+    p_a_choice = str(input("¿Jugar otra vez? (s or n) ")).lower()
+    while p_a_choice not in ["s", "n"]:
         clearScreen()
-        print("Invalid Input")
-        p_a_choice = str(input("Play again? (y or n) ")).lower()
+        print("Entrada no válida")
+        p_a_choice = str(input("¿Jugar otra vez? (s or n) ")).lower()
     if p_a_choice == 'n':
-        print("Goodbye")
         clearScreen()
         return False
-    elif p_a_choice == 'y':
+    elif p_a_choice == 's':
         clearScreen()
         return True

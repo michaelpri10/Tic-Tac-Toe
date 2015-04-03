@@ -6,18 +6,18 @@ except NameError:
     pass
 
 def modeChoices():
-    print("  1. Player vs Player")
-    print("  2. Player vs Bot")
-    print("  3. Bot vs Bot")
+    print("  1. Jugador contra Jugador")
+    print("  2. Jugador contra Robot")
+    print("  3. Robot contra Robot")
 
 def chooseMode():
     modeChoices()
-    gameMode = input("Which mode would you like to play? ")
+    gameMode = input("¿Modo en que te gustaría jugar? ")
     while gameMode not in ["1", "2", "3"]:
         clearScreen()
-        print("Invalid Input")
+        print("Entrada no válida")
         modeChoices()
-        gameMode = input("Which mode would you like to play? ")
+        gameMode = input("¿Modo en que te gustaría jugar? ")
     if gameMode == "1":
         return "p1vsp2()"
     elif gameMode == "2":

@@ -27,7 +27,7 @@ def main():
         else:
             break
 
-    print("Goodbye")
+    print("Adiós")
     time.sleep(1.5)
     quit()
 

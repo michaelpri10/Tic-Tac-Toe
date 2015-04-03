@@ -8,16 +8,16 @@ except NameError:
     pass
 
 def chooseXO():
-    choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
+    choice = input("¿Quieres ser 'X' o 'O'? ('O' va primero) ")
     while choice.lower() not in ['x', 'o']:
         clearScreen()
-        print("Invalid Input")
-        choice = input("Would you like to be 'X' or 'O'? ('O' goes first) ")
+        print("Entrada no válida")
+        choice = input("¿Quieres ser 'X' o 'O'? ('O' va primero) ")
     if choice.lower() == 'x':
-        print("AI will go first")
+        print("Robot irá primero")
         time.sleep(1.5)
         return("p1", "O", "X")
     elif choice.lower() == 'o':
-        print("You will go first")
+        print("Irás primero")
         time.sleep(1.5)
         return("AI", "X", "O")

@@ -10,8 +10,8 @@ def p1vsp2():
     board = Board()
     turns_taken = 0
     possible_nums = [str(i) for i in range (1,10)]
-    print("Player 1 is 'O' and will go first")
-    print("Player 2 is 'X' and will go second")
+    print("Jugador 1 es 'O' y vayan en primer lugar")
+    print("Jugador 2 es 'X' y vayan en segundo lugar")
     time.sleep(2)
     p1_XO = "O"
     p2_XO = "X"
@@ -22,11 +22,11 @@ def p1vsp2():
         board.print_board()
 
         if last_move == "p2":
-            print("Player 1's Turn")
+            print("Jugador 1 turno")
             possible_nums = p1_turn(board, possible_nums, p1_XO)
             last_move = "p1"
         elif last_move == "p1":
-            print("Player 2's turn")
+            print("Jugador 2 turno")
             possible_nums = p2_turn(board, possible_nums, p2_XO)
             last_move = "p2"
 
@@ -42,13 +42,13 @@ def p1vsp2():
     board.print_board()
 
     if win == p1_XO:
-        print("Player 1 wins! Congratulations :)")
+        print("Jugador 1 gana! Felicitaciones :)")
         time.sleep(1.5)
     elif win == p2_XO:
-        print("Player 2 wins! Congratulations :)")
+        print("Jugador 2 gana! Felicitaciones :)")
         time.sleep(1.5)
     else:
-        print("It was a draw")
+        print("Era un empate")
         time.sleep(1.5)
 
     time.sleep(1.5)
